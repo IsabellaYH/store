@@ -1,4 +1,4 @@
-/* ===== ESTILOS GENERALES MEJORADOS ===== */
+/* ===== ESTILOS GENERALES ===== */
 body {
     font-family: "DM Serif Display", serif;
     background-color: #cac7c0;
@@ -10,7 +10,7 @@ body {
     flex-direction: column;
 }
 
-/* ===== HEADER Y NAVEGACIÓN MEJORADA ===== */
+/* ===== HEADER Y NAVEGACIÓN ===== */
 .navbar {
     background-color: #4d4026 !important;
     padding: 0.5rem 0;
@@ -46,7 +46,7 @@ body {
     color: #c7b388 !important;
 }
 
-/* Botón toggler mejorado */
+/* Botón toggler */
 .navbar-toggler {
     padding: 0.5rem 0.75rem;
     border: 2px solid rgba(199, 179, 136, 0.3);
@@ -65,12 +65,12 @@ body {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.8)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
-/* Menú desplegable mejorado */
+/* Menú desplegable */
 .navbar-collapse {
     transition: all 0.4s ease-in-out;
 }
 
-/* ===== HERO SECTION MEJORADA ===== */
+/* ===== HERO SECTION ===== */
 .hero-section {
     background: linear-gradient(rgba(202, 199, 192, 0.8), rgba(202, 199, 192, 0.9));
     padding: 100px 0;
@@ -93,7 +93,7 @@ body {
     font-weight: 400;
 }
 
-/* ===== BOTONES MEJORADOS ===== */
+/* ===== BOTONES ===== */
 .btn-primary {
     background-color: #79734c !important;
     border-color: #79734c !important;
@@ -127,7 +127,7 @@ body {
     color: white !important;
 }
 
-/* ===== PRODUCTOS MEJORADOS ===== */
+/* ===== PRODUCTOS ===== */
 .product-card {
     background-color: white;
     border-radius: 15px;
@@ -189,7 +189,29 @@ body {
     color: white;
 }
 
-/* ===== FOOTER MEJORADO ===== */
+/* ===== REMOVER ESTILOS AZULES DE BOOTSTRAP ===== */
+.btn-outline-primary:not(:hover) {
+    color: #79734c !important;
+}
+
+.btn-link {
+    color: #79734c !important;
+}
+
+/* ===== SOBRESCRIBIR CLASES DE BOOTSTRAP ===== */
+.text-primary {
+    color: #79734c !important;
+}
+
+.bg-primary {
+    background-color: #79734c !important;
+}
+
+.border-primary {
+    border-color: #79734c !important;
+}
+
+/* ===== FOOTER ===== */
 .footer {
     background-color: #4d4026;
     color: #f8f9fa;
@@ -264,7 +286,7 @@ body {
     border-radius: 30px;
 }
 
-/* ===== MEDIA QUERIES MEJORADAS ===== */
+/* ===== MEDIA QUERIES ===== */
 @media (max-width: 1199px) {
     .nombreMarca {
         font-size: 2.5rem;
@@ -280,7 +302,7 @@ body {
         font-size: 2.2rem;
     }
     
-    /* Menú móvil mejorado */
+    /* Menú móvil */
     .navbar-collapse {
         position: fixed;
         top: 80px;
