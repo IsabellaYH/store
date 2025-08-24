@@ -104,14 +104,20 @@ body {
   animation: fadeInUp 1s ease-out 0.6s both;
 }
 
-.btn {
+.btn-toxfit {
   position: relative;
   overflow: hidden;
   transition: all 0.3s ease;
   transform: translateY(0);
   backface-visibility: hidden;
+  padding: 12px 30px;
+  font-weight: 600;
+  border-radius: 50px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 2px solid transparent;
 }
-.btn::after {
+.btn-toxfit::after {
   content: "";
   position: absolute;
   top: 0;
@@ -121,93 +127,54 @@ body {
   background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
   transition: all 0.3s ease;
 }
-.btn:hover {
+.btn-toxfit:hover {
   transform: translateY(-3px);
   box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
 }
-.btn:hover::after {
+.btn-toxfit:hover::after {
   left: 100%;
 }
-.btn:active {
+.btn-toxfit:active {
   transform: translateY(-1px);
 }
-
-body .btn.btn-primary {
-  background-color: #79734c !important;
-  border-color: #79734c !important;
-  color: #ffffff !important;
-  border-width: 2px !important;
-  padding: 12px 30px;
-  border-radius: 50px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  position: relative;
-  z-index: 1;
+.btn-toxfit:focus {
+  outline: none;
+  box-shadow: none;
 }
-body .btn.btn-primary:hover, body .btn.btn-primary:focus, body .btn.btn-primary:active {
-  background-color: #6a6642 !important;
-  border-color: #6a6642 !important;
+
+.btn-toxfit-primary {
+  background-color: #79734c;
+  border-color: #79734c;
+  color: #ffffff;
+}
+.btn-toxfit-primary:hover {
+  background-color: #6a6642;
+  border-color: #6a6642;
+  color: #ffffff;
   transform: translateY(-2px);
-  border-width: 2px !important;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-body .btn.btn-primary::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.2) 100%);
-  z-index: -1;
-  border-radius: 50px;
-  opacity: 0;
-  transition: all 0.3s ease;
-}
-body .btn.btn-primary:hover::before {
-  opacity: 1;
 }
 
-body .btn.btn-outline-primary {
-  color: #79734c !important;
-  border-color: #79734c !important;
-  background-color: transparent !important;
-  border-width: 2px !important;
-  padding: 12px 30px;
-  font-weight: 600;
-  border-radius: 50px;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-  transition: all 0.3s ease;
+.btn-toxfit-outline {
+  background-color: transparent;
+  border-color: #79734c;
+  color: #79734c;
 }
-body .btn.btn-outline-primary:hover, body .btn.btn-outline-primary:focus, body .btn.btn-outline-primary:active {
-  border-color: #6a6642 !important;
-  border-width: 2px !important;
-}
-body .btn.btn-outline-primary::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background: #79734c;
-  transition: all 0.3s ease;
-  z-index: -1;
-  border-radius: 50px;
-}
-body .btn.btn-outline-primary:hover {
-  color: #ffffff !important;
-}
-body .btn.btn-outline-primary:hover::before {
-  width: 100%;
+.btn-toxfit-outline:hover {
+  background-color: #79734c;
+  color: #ffffff;
 }
 
-.product-card {
+.btn-toxfit-secondary {
+  background-color: #4d4026;
+  border-color: #4d4026;
+  color: #ffffff;
+}
+.btn-toxfit-secondary:hover {
+  background-color: #6a6642;
+  border-color: c79734c;
+}
+
+body .product-card {
   background-color: #ffffff;
   border-radius: 12px;
   overflow: hidden;
@@ -219,7 +186,7 @@ body .btn.btn-outline-primary:hover::before {
   flex-direction: column;
   position: relative;
 }
-.product-card::before {
+body .product-card::before {
   content: "";
   position: absolute;
   top: 0;
@@ -231,14 +198,14 @@ body .btn.btn-outline-primary:hover::before {
   transition: all 0.3s ease;
   z-index: 1;
 }
-.product-card:hover {
+body .product-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
 }
-.product-card:hover::before {
+body .product-card:hover::before {
   opacity: 1;
 }
-.product-card:hover .product-image {
+body .product-card:hover .product-image {
   transform: scale(1.05);
 }
 
@@ -291,23 +258,15 @@ body .btn.btn-outline-primary:hover::before {
 }
 
 .bg-danger {
-  background-color: #dc3545 !important;
+  background-color: #dc3545;
 }
 
 .bg-success {
-  background-color: #28a745 !important;
+  background-color: #28a745;
 }
 
 .bg-primary {
-  background-color: #79734c !important;
-}
-
-.bg-secondary {
-  background-color: #4d4026;
-}
-
-.bg-accent {
-  background-color: #c7b388;
+  background-color: #79734c;
 }
 
 .section-title {
@@ -559,16 +518,20 @@ body .btn.btn-outline-primary:hover::before {
     text-align: center;
   }
 }
-.text-primary {
-  color: #79734c !important;
+.bg-toxfit-primary {
+  background-color: #79734c;
 }
 
-.text-secondary {
-  color: #4d4026 !important;
+.bg-toxfit-secondary {
+  background-color: #4d4026;
 }
 
-.text-accent {
-  color: #c7b388 !important;
+.bg-toxfit-accent {
+  background-color: #c7b388;
+}
+
+.text-toxfit-primary {
+  color: #79734c;
 }
 
 .fa-tshirt, .fa-medal, .fa-heart,
@@ -581,6 +544,16 @@ body .btn.btn-outline-primary:hover::before {
   background-color: #79734c;
   border-color: #6a6642;
   color: #ffffff !important;
+}
+
+.btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.btn:focus-visible {
+  outline: 2px solid #c7b388;
+  outline-offset: 2px;
 }
 
 .col-lg-4,

@@ -9,16 +9,24 @@
 @use 'responsive';
 
 // ===== COLORES PARA ICONOS =====
-.text-primary {
-  color: variables.$primary !important;
+.bg-toxfit-primary {
+  background-color: variables.$primary;
 }
 
-.text-secondary {
-  color: variables.$secondary !important;
+.bg-toxfit-secondary {
+  background-color: variables.$secondary;
 }
 
-.text-accent {
-  color: variables.$accent !important;
+.bg-toxfit-accent {
+  background-color: variables.$accent;
+}
+
+.bg-success { 
+  background-color: #28a745; 
+}
+
+.text-toxfit-primary {
+  color: variables.$primary;
 }
 
 .fa-tshirt, .fa-medal, .fa-heart, 
@@ -32,6 +40,17 @@
   background-color: variables.$primary;
   border-color: variables.$primary-dark;
   color: variables.$white !important;
+}
+// ELIMINA AZUL DE ENFOQUE POR DEFECTO DE BOOTSTRAP
+.btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+// FOCUS VISIBLE PARA ACCESIBILIDAD
+.btn:focus-visible {
+  outline: 2px solid variables.$accent;
+  outline-offset: 2px;
 }
 
 // ===== TRANSICIÓN SUAVE PARA MOSTRAR/OCULTAR =====
@@ -55,10 +74,3 @@
     transform: translateY(0);
   }
 }
-
-// ===== COLORES DE BADGES =====
-.bg-danger { background-color: #dcb035 !important; }
-.bg-success { background-color: #28a745 !important; }
-.bg-primary { background-color: variables.$primary; }
-.bg-secondary { background-color: variables.$secondary; }
-.bg-accent { background-color: variables.$accent; } 
