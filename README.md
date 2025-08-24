@@ -33,18 +33,6 @@ TOXFIT es una marca de ropa deportiva premium que combina estilo, comodidad y te
 
 ### Arquitectura SCSS
 ```
-toxfit-store/
-├── index.html              # Página principal
-├── pages/
-│   ├── products.html       # Catálogo de productos
-│   ├── sales.html          # Productos en oferta
-│   ├── aboutMe.html        # Sobre la marca
-│   └── contact.html        # Formulario de contacto
-├── assests/
-│   ├── img/                # Imágenes y logos
-│   └── (otros recursos)
-├── css/                    # CSS compilado (output)
-│   └── styles.css
 ├── sass/                    # Componentes modulares SCSS
     ├── styles.scss          # Archivo principal de compilación
     ├── styles.css.map       # Source map para debugging
@@ -56,10 +44,6 @@ toxfit-store/
     ├── _footer.scss        # Estilos del footer
     ├── _animations.scss    # Animaciones y keyframes
     └── _responsive.scss    # Media queries y responsive
-├── vscode/                 # Configuración de VS Code
-├── wireframe/              # Diseños y prototipos
-├── package.json            # Dependencias y scripts
-└── README.md
 ```
 
 ## 🎨 Guía de Estilos
@@ -101,20 +85,22 @@ toxfit-store/
 ├── sass/                   # Código fuente SCSS
 │   ├── styles.scss         # Archivo principal de importación
 │   ├── styles.css.map      # Source map para debugging
-│   └── partials/           # Componentes modulares
-│       ├── _variables.scss
-│       ├── _mixins.scss
-│       ├── _base.scss
-│       ├── _components.scss
-│       ├── _header.scss
-│       ├── _footer.scss
-│       ├── _animations.scss
-│       └── _responsive.scss
+│   ├── _variables.scss
+│   ├── _mixins.scss
+│   ├── _base.scss
+│   ├── _components.scss
+│   ├── _header.scss
+│   ├── _footer.scss
+│   ├── _animations.scss
+│   └── _responsive.scss
 ├── css/                    # CSS compilado (output)
 │   └── styles.css
 ├── assests/
 │   ├── img/                # Imágenes y logos
 │   └── (otros recursos)
+├── vscode/                 # Configuración de VS Code
+├── wireframe/              # Diseños y prototipos
+├── package.json            # Dependencias y scripts
 └── README.md
 ```
 
