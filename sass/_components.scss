@@ -1,0 +1,320 @@
+// ===== COMPONENTES ===== //
+@use 'variables';
+@use 'mixins';
+
+// ===== HERO SECTION ===== //
+.hero-section {
+  position: relative;
+  overflow: hidden;
+  padding: 100px 0;
+  margin-bottom: 2rem;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(variables.$accent, 0.1) 0%, transparent 70%);
+    animation: pulse 15s infinite alternate;
+    z-index: -1;
+  }
+  
+  .nombreMarca {
+    color: variables.$secondary;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    line-height: 1.2;
+    animation: fadeInDown 1s ease-out;
+    position: relative;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 3px;
+      background: variables.$accent;
+      animation: expandLine 1.5s ease-out forwards;
+    }
+  }
+  
+  .hero-subtitle {
+    color: variables.$text;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    font-weight: 400;
+    animation: fadeInUp 1s ease-out 0.3s both;
+  }
+  
+  .btn {
+    animation: fadeInUp 1s ease-out 0.6s both;
+  }
+}
+
+// ===== BOTONES ===== 
+.btn {
+    @include mixins.button-base;
+}
+
+body .btn.btn-primary {
+  background-color: variables.$primary !important;
+  border-color: variables.$primary !important;
+  color: variables.$white !important;
+  border-width: 2px !important;
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: variables.$transition-medium;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  position: relative;
+  z-index: 1;
+  
+   &:hover, &:focus, &:active {
+    background-color: variables.$primary-dark !important;
+    border-color: variables.$primary-dark !important;
+     transform: translateY(-2px);
+    border-width: 2px !important;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  }
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.2) 100%);
+    z-index: -1;
+    border-radius: 50px;
+    opacity: 0;
+    transition: variables.$transition-medium;
+  }
+  
+   &:hover::before {
+    opacity: 1;
+  }
+}
+
+body .btn.btn-outline-primary {
+  color: variables.$primary !important;
+  border-color: variables.$primary !important;
+  background-color: transparent !important;
+  border-width: 2px !important; 
+  padding: 12px 30px;
+  font-weight: 600;
+  border-radius: 50px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: variables.$transition-medium;
+  
+&:hover, &:focus, &:active {
+    border-color: variables.$primary-dark !important;
+    border-width: 2px !important;
+  }
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: variables.$primary;
+    transition: variables.$transition-medium;
+    z-index: -1;
+    border-radius: 50px;
+  }
+  
+  &:hover {
+    color: variables.$white !important;
+    
+    &::before {
+      width: 100%;
+    }
+  }
+}
+
+// ===== PRODUCTOS =====
+.product-card {
+  background-color: variables.$white;
+  border-radius: variables.$border-radius;
+  overflow: hidden;
+  box-shadow: variables.$box-shadow;
+  transition: variables.$transition-medium;
+  margin-bottom: 1.5rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.1) 100%);
+    opacity: 0;
+    transition: variables.$transition-medium;
+    z-index: 1;
+  }
+  
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: variables.$box-shadow-hover;
+    
+    &::before {
+      opacity: 1;
+    }
+    
+    .product-image {
+      transform: scale(1.05);
+    }
+  }
+}
+
+.product-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
+  transition: variables.$transition-slow;
+}
+
+.product-info {
+  padding: 1.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-name {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  color: variables.$secondary;
+}
+
+.product-price {
+  color: variables.$primary;
+  font-weight: bold;
+  font-size: 1.25rem;
+  margin: 0.5rem 0;
+}
+
+.product-actions {
+  margin-top: auto;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.product-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: variables.$white;
+  animation: pulse 2s infinite;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  z-index: 2;
+}
+
+.bg-danger { background-color: #dc3545 !important; }
+.bg-success { background-color: #28a745 !important; }
+.bg-primary { background-color: variables.$primary !important; }
+
+// ===== SECCIONES =====
+.section-title {
+  color: variables.$secondary;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 15px;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, variables.$primary, variables.$accent, variables.$primary);
+    transform-origin: left;
+    animation: expandLine 1.5s ease-out forwards;
+  }
+}
+
+.featured-products {
+  padding: 4rem 0;
+  position: relative;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.5) 0%, rgba(variables.$background, 0.3) 100%);
+    z-index: -1;
+    opacity: 0.7;
+  }
+}
+// ===== CARACTERÍSTICAS =====
+.features-section {
+  background: linear-gradient(135deg, rgba(variables.$white, 0.9) 0%, rgba(variables.$background, 0.3) 100%);
+}
+
+.feature-item {
+  background: variables.$white;
+  border-radius: variables.$border-radius;
+  box-shadow: variables.$box-shadow;
+  transition: variables.$transition-medium;
+  border: 1px solid rgba(variables.$primary, 0.1);
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: variables.$box-shadow-hover;
+    
+    .feature-icon {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.feature-icon {
+  transition: variables.$transition-medium;
+  display: inline-block;
+}
+
+.feature-title {
+  color: variables.$secondary;
+  font-weight: 600;
+  position: relative;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 2px;
+    background: linear-gradient(90deg, variables.$primary, variables.$accent);
+  }
+}

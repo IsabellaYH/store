@@ -21,8 +21,8 @@
                 <a class="navbar-brand" href="../index.html">
                     <img src="../assests/img/logo.png" alt="TOXFIT Logo" class="logo-img">
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
-                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
@@ -58,164 +58,217 @@
         <section class="categories-section py-3">
             <div class="container">
                 <div class="d-flex flex-wrap justify-content-center gap-2">
-                    <button class="btn btn-outline-primary active btn-color:#fff">Todos</button>
-                    <button class="btn btn-outline-primary">Catsuits</button>
-                    <button class="btn btn-outline-primary">Conjuntos</button>
-                    <button class="btn btn-outline-primary">Shorts</button>
-                    <button class="btn btn-outline-primary">Tops</button>
+                    <button class="btn btn-outline-primary active" data-filter="all">Todos</button>
+                    <button class="btn btn-outline-primary" data-filter="catsuit">Catsuits</button>
+                    <button class="btn btn-outline-primary" data-filter="conjunto">Conjuntos</button>
+                    <button class="btn btn-outline-primary" data-filter="leggins">Leggins</button>
+                    <button class="btn btn-outline-primary" data-filter="vestido">Vestidos</button>
+                    <button class="btn btn-outline-primary" data-filter="short">Shorts</button>
+                    <button class="btn btn-outline-primary" data-filter="top">Tops</button>
                 </div>
             </div>
         </section>
 
-        <!-- Sección de productos -->
-        <section class="products-section py-5">
-            <div class="container">
-                <h2 class="section-title">Todos los Productos</h2>
-                <div class="row">
-                    <!-- Producto 1 -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="product-card">
-                            <div class="product-badge bg-success">Nuevo</div>
-                            <img src="../assests/img/catsuitMangas.jpeg" alt="Catsuit Fitness" class="product-image">
-                            <div class="product-content">
-                                <h3 class="product-name">Catsuit Con Mangas Fit</h3>
-                                <p class="product-description">Catsuit de compresión para entrenamientos intensos con
-                                    tecnología de secado rápido.</p>
-                                <p class="product-price">$89.99</p>
-                                <div class="product-actions">
-                                    <button class="btn-cart">Comprar</button>
-                                    <button class="btn-details">Detalles</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Producto 2 -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="product-card">
-                            <div class="product-badge bg-info">Popular</div>
-                            <img src="../assests/img/catsuitEspalda.jpeg" alt="Catsuit Espalda" class="product-image">
-                            <div class="product-content">
-                                <h3 class="product-name">Catsuit Descubierto en Espalda</h3>
-                                <p class="product-description">Diseñado para otoño/invierno.</p>
-                                <p class="product-price">$94.99</p>
-                                <div class="product-actions">
-                                    <button class="btn-cart">Comprar</button>
-                                    <button class="btn-details">Detalles</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Producto 3 -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="product-card">
-                            <div class="product-badge bg-danger">Oferta</div>
-                            <img src="../assests/img/catsuitTiras.jpeg" alt="Catsuit de Tiras" class="product-image">
-                            <div class="product-content">
-                                <h3 class="product-name">Catsuit de Tiras</h3>
-                                <p class="product-description">Con máxima libertad de movimiento.</p>
-                                <p class="product-price"><span class="old-price">$119.99</span> $99.99</p>
-                                <div class="product-actions">
-                                    <button class="btn-cart">Comprar</button>
-                                    <button class="btn-details">Detalles</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Producto 4 -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="product-card">
-                            <div class="product-badge bg-warning text-dark">Popular</div>
-                            <img src="../assests/img/conjuntosDeportivos.jpeg" alt="Conjunto Corto"
-                                class="product-image w-100">
-                            <div class="product-content">
-                                <h3 class="product-name">Conjunto Power Fit</h3>
-                                <p class="product-description">Set completo para entrenamiento con materiales
-                                    transpirables.</p>
-                                <p class="product-price">$74.99</p>
-                                <div class="product-actions">
-                                    <button class="btn-cart">Comprar</button>
-                                    <button class="btn-details">Detalles</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Producto 5 -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="product-card">
-                            <div class="product-badge bg-success">Nuevo</div>
-                            <img src="../assests/img/shorts.jpeg" alt="Shorts Fitness" class="product-image w-100">
-                            <div class="product-content">
-                                <h3 class="product-name">Shorts Power Flex</h3>
-                                <p class="product-description">Shorts de compresión para entrenamiento de fuerza y
-                                    crossfit.</p>
-                                <p class="product-price">$44.99</p>
-                                <div class="product-actions">
-                                    <button class="btn-cart">Comprar</button>
-                                    <button class="btn-details">Detalles</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Producto 6 -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="product-card">
-                            <div class="product-badge bg-danger">Oferta</div>
-                            <img src="../assests/img/tops.png" alt="Top Yoga" class="product-image w-100">
-                            <div class="product-content">
-                                <h3 class="product-name">Top Yoga Balance</h3>
-                                <p class="product-description">Top suave y transpirable para yoga y pilates.</p>
-                                <p class="product-price">$29.99</p>
-                                <div class="product-actions">
-                                    <button class="btn-cart">Comprar</button>
-                                    <button class="btn-details">Detalles</button>
-                                </div>
-                            </div>
+        <div class="row">
+            <!-- Sección de productos -->
+            <!-- Producto 1 -->
+            <div class="col-lg-4 col-md-6 mb-4 d-flex align-items-stretch">
+                <div class="product-card catsuit w-100 text-center">
+                    <div class="product-badge bg-success">Nuevo</div>
+                    <img src="../assests/img/catsuitMangas.jpeg" alt="Catsuit Fitness" class="product-image mb-3">
+                    <div class="product-content">
+                        <h3 class="product-name">Catsuit Con Mangas Fit</h3>
+                        <p class="product-description">Alta compresión para entrenamientos intensos </p>
+                        <p class="product-price mb-3">$89.99</p>
+                        <div>
+                            <button class="btn btn-outline-primary">Comprar</button>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <!-- Producto 2 -->
+            <div class="col-lg-4 col-md-6 mb-4 d-flex align-items-stretch">
+                <div class="product-card catsuit w-100 text-center">
+                    <div class="product-badge bg-info">Popular</div>
+                    <img src="../assests/img/catsuitEspalda.jpeg" alt="Catsuit Espalda" class="product-image mb-3">
+                    <div class="product-content">
+                        <h3 class="product-name">Catsuit Descubierto en Espalda</h3>
+                        <p class="product-description">Diseñado para otoño/invierno.</p>
+                        <p class="product-price mb-3">$94.99</p>
+                        <div>
+                            <button class="btn btn-outline-primary">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 3 -->
+            <div class="col-lg-4 col-md-6 mb-4 d-flex align-items-stretch">
+                <div class="product-card catsuit w-100 text-center">
+                    <div class="product-badge bg-danger">Oferta</div>
+                    <img src="../assests/img/catsuitTiras.jpeg" alt="Catsuit de Tiras" class="product-image mb-3">
+                    <div class="product-content">
+                        <h3 class="product-name">Catsuit de Tiras</h3>
+                        <p class="product-description">Con máxima libertad de movimiento.</p>
+                        <p class="product-price mb-2">
+                            <span class="text-decoration-line-through text-muted">$119.99</span>
+                            <span class="fw-bold product-price mb-3">$99.99</span>
+                        </p>
+                        <div>
+                            <button class="btn btn-outline-primary">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 4 -->
+            <div class="col-lg-4 col-md-6 mb-4 d-flex align-items-stretch">
+                <div class="product-card conjunto w-100 text-center">
+                    <div class="product-badge bg-warning text-dark">Popular</div>
+                    <img src="../assests/img/conjuntosDeportivos.jpeg" alt="Conjunto Corto" class="product-image mb-3">
+                    <div class="product-content">
+                        <h3 class="product-name">Conjunto Power Fit</h3>
+                        <p class="product-description">Set completo para entrenamiento con materiales
+                            transpirables.</p>
+                        <p class="product-price mb-3">$74.99</p>
+                        <div>
+                            <button class="btn btn-outline-primary">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 5 -->
+            <div class="col-lg-4 col-md-6 mb-4 d-flex align-items-stretch">
+                <div class="product-card short w-100 text-center">
+                    <div class="product-badge bg-success">Nuevo</div>
+                    <img src="../assests/img/shorts.jpeg" alt="Shorts Fitness" class="product-image mb-3">
+                    <div class="product-content">
+                        <h3 class="product-name">Shorts Power Flex</h3>
+                        <p class="product-description">Shorts de compresión para entrenamiento de fuerza y
+                            crossfit.</p>
+                        <p class="product-price mb-3">$44.99</p>
+                        <div>
+                            <button class="btn btn-outline-primary">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 6 -->
+            <div class="col-lg-4 col-md-6 mb-4 d-flex align-items-stretch">
+                <div class="product-card top w-100 text-center">
+                    <div class="product-badge bg-danger">Oferta</div>
+                    <img src="../assests/img/tops.png" alt="Top Yoga" class="product-image mb-3">
+                    <div class="product-content">
+                        <h3 class="product-name">Top Yoga Balance</h3>
+                        <p class="product-description">Top suave y transpirable para yoga y pilates.</p>
+                        <p class="product-price mb-2">
+                            <span class="text-decoration-line-through text-muted">$59.99</span>
+                            <span class="fw-bold product-price mb-3">$39.99</span>
+                        </p>
+                        <div>
+                            <button class="btn btn-outline-primary">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 7 -->
+            <div class="col-lg-4 col-md-6 mb-4 d-flex align-items-stretch">
+                <div class="product-card vestido w-100 text-center">
+                    <div class="product-badge bg-success">Nuevo</div>
+                    <img src="../assests/img/vestidoDeportivo.png" alt="Vestido Deportivo" class="product-image mb-3">
+                    <div class="product-content">
+                        <h3 class="product-name">Vestido Deportivo Padel</h3>
+                        <p class="product-description">Vestido Deportivo Apto para Padel, Tenis o GYM</p>
+                        <p class="product-price mb-3">$75.99</p>
+                        <div>
+                            <button class="btn btn-outline-primary">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 8 -->
+            <div class="col-lg-4 col-md-6 mb-4 d-flex align-items-stretch">
+                <div class="product-card catsuit w-100 text-center">
+                    <div class="product-badge bg-warning">Popular</div>
+                    <img src="../assests/img/catsuiCorto.png" alt="Catsuit Corto" class="product-image mb-3">
+                    <div class="product-content">
+                        <h3 class="product-name">Catsuit Corto Summer</h3>
+                        <p class="product-description">Moldeable A Cualquier Cuerpo</p>
+                        <p class="product-price mb-3">$45.00</p>
+                        <div>
+                            <button class="btn btn-outline-primary">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 9 -->
+            <div class="col-lg-4 col-md-6 mb-4 d-flex align-items-stretch">
+                <div class="product-card leggins w-100 text-center">
+                    <div class="product-badge bg-danger">Oferta</div>
+                    <img src="../assests/img/leggins.jpeg" alt="Leggins" class="product-image mb-3">
+                    <div class="product-content">
+                        <h3 class="product-name">Leggins Levanta Cola</h3>
+                        <p class="product-description">Leggins Seamless Push Up Levanta Cola</p>
+                        <p class="product-price mb-2">
+                            <span class="text-decoration-line-through text-muted">$79.99</span>
+                            <span class="fw-bold product-price mb-3">$69.99</span>
+                        <div>
+                            <button class="btn btn-outline-primary">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
         </section>
     </main>
 
-    
+
     <!-- Final de la página -->
- <footer class="footer py-5">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-6 mb-4 mb-lg-0">
-                <div class="d-flex flex-column align-items-center align-items-lg-start">
-                    <img src="../assests/img/pieDePagina.png" alt="TOXFIT" class="img-fluid mb-3" style="max-width: 200px;">
-                    <p class="text-center text-lg-start mb-4">Tu diseños de alta calidad, inspirado en todos los cuerpos, demostrando posibles en "imposibles".</p>
-                    <div class="d-flex gap-3">
-                        <a href="https://www.instagram.com/toxfitn" target="_blank" rel="noopener noreferrer" class="social-link">
-                            <i class="fab fa-instagram fa-2x"></i>
-                        </a>
-                        <a href="https://w.app/xtb3ax" target="_blank" rel="noopener noreferrer" class="social-link">
-                            <i class="fab fa-whatsapp fa-2x"></i>
-                        </a>
-                        <a href="https://listado.mercadolibre.com.ar/pagina/toxfit/" target="_blank" rel="noopener noreferrer" class="social-link">
-                            <i class="fas fa-store fa-2x"></i>
-                        </a>
+    <footer class="footer py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="d-flex flex-column align-items-center align-items-lg-start">
+                        <img src="../assests/img/pieDePagina.png" alt="TOXFIT" class="img-fluid mb-3"
+                            style="max-width: 200px;">
+                        <p class="text-center text-lg-start mb-4">Tu diseños de alta calidad, inspirado en todos los
+                            cuerpos, demostrando posibles en "imposibles".</p>
+                        <div class="d-flex gap-3">
+                            <a href="https://www.instagram.com/toxfitn" target="_blank" rel="noopener noreferrer"
+                                class="social-link">
+                                <i class="fab fa-instagram fa-2x"></i>
+                            </a>
+                            <a href="https://wa.link/do7ka0" target="_blank" rel="noopener noreferrer"
+                                class="social-link">
+                                <i class="fab fa-whatsapp fa-2x"></i>
+                            </a>
+                            <a href="https://listado.mercadolibre.com.ar/pagina/toxfit/" target="_blank"
+                                rel="noopener noreferrer" class="social-link">
+                                <i class="fas fa-store fa-2x"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-6">
-                <h3 class="h4 mb-4 text-center text-lg-start">CONTACTO</h3>
-                <ul class="list-unstyled text-center text-lg-start">
-                    <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> Av. Deportiva 123, CABA</li>
-                    <li class="mb-2"><i class="fas fa-envelope me-2"></i> info@toxfit.com</li>
-                    <li><i class="fas fa-phone me-2"></i> +54 911 3459 6708</li>
-                </ul>
+                <div class="col-lg-6">
+                    <h3 class="h4 mb-4 text-center text-lg-start">CONTACTO</h3>
+                    <ul class="list-unstyled text-center text-lg-start">
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> Av. Deportiva 123, CABA</li>
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i> info@toxfit.com</li>
+                        <li><i class="fas fa-phone me-2"></i> +54 911 3459 6708</li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
-</footer>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/main.js"></script>
 </body>
 
 </html>

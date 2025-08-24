@@ -1,0 +1,17 @@
+@use 'variables';
+@use 'mixins';
+
+// ===== ESTILOS GENERALES =====
+body {
+  font-family: variables.$font-family;
+  background-color: variables.$background;
+  color: variables.$text;
+  padding-top: 80px;
+  line-height: 1.6;
+  min-height: 100vh;
+  @include mixins.flex-column;
+}
+
+.oculto {
+  display: none !important;
+}

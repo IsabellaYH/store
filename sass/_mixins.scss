@@ -1,0 +1,43 @@
+@use 'variables';
+
+// ===== MIXINS =====
+@mixin transition($property: all, $duration: 0.3s, $easing: ease) {
+  transition: $property $duration $easing;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin button-base {
+  position: relative;
+  overflow: hidden;
+  transition: variables.$transition-medium;
+  transform: translateY(0);
+  backface-visibility: hidden;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: variables.$transition-medium;
+  }
+  
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: variables.$box-shadow-hover;
+    
+    &::after {
+      left: 100%;
+    }
+  }
+  
+  &:active {
+    transform: translateY(-1px);
+  }
+}
