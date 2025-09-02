@@ -29,10 +29,14 @@
   color: variables.$primary;
 }
 
-.fa-tshirt, .fa-medal, .fa-heart, 
-.fa-ruler-combined, .fa-headset, 
-.fa-shield-alt, .fa-truck {
-  color: variables.$primary;
+.feature-item .feature-icon i.fas {
+  color: $primary;
+   text-decoration: none !important;
+}
+
+// Arreglo para íconos dentro de input-group con fondo de color
+.input-group-text.bg-primary .fas {
+  color: variables.$white; 
 }
 
 // ===== ESTILOS PARA BOTONES DE FILTRO ACTIVOS =====
