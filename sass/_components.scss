@@ -72,6 +72,10 @@
     outline: none;
     box-shadow: none;
   }
+   &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
 }
 
 .btn-toxfit-primary {
@@ -198,7 +202,6 @@ body .product-card {
 }
 
 .bg-danger { background-color: #dc3545 }
-.bg-success { background-color: #28a745  }
 .bg-primary { background-color: variables.$primary  }
 
 // ===== SECCIONES =====
@@ -281,5 +284,167 @@ body .product-card {
     width: 50px;
     height: 2px;
     background: linear-gradient(90deg, variables.$primary, variables.$accent);
+  }
+}
+
+// ===== CARRUSEL =====
+#featuredCarousel {
+  margin: 2rem 0;
+  
+  .carousel-item {
+    padding: 1rem;
+  }
+  
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 5%;
+    opacity: 0.8;
+    
+    &:hover {
+      opacity: 1;
+    }
+  }
+  
+  .carousel-indicators {
+    bottom: -50px;
+    
+    button {
+      background-color: $primary;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      margin: 0 5px;
+    }
+  }
+
+// Controles personalizados para el carrusel
+.carousel-control-custom {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.8;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  &:hover {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+}
+
+.carousel-control-prev.carousel-control-custom {
+  left: 15px;
+}
+
+.carousel-control-next.carousel-control-custom {
+  right: 15px;
+}
+
+// Personalizar los iconos de los controles
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 25px;
+  height: 25px;
+  background-size: 100%, 100%;
+  background-position: center;
+  filter: invert(1); // Hace que los iconos sean blancos
+}
+
+// Para dispositivos móviles
+@media (max-width: 768px) {
+  .carousel-control-custom {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .carousel-control-prev.carousel-control-custom {
+    left: 10px;
+  }
+  
+  .carousel-control-next.carousel-control-custom {
+    right: 10px;
+  }
+}
+}
+
+// ===== COLORES PARA ICONOS =====
+.bg-toxfit-primary {
+  background-color: variables.$primary;
+}
+
+.bg-toxfit-secondary {
+  background-color: variables.$secondary;
+}
+
+.bg-toxfit-accent {
+  background-color: variables.$accent;
+}
+
+.bg-success { 
+  background-color: #28a745; 
+}
+
+.text-toxfit-primary {
+  color: variables.$primary;
+}
+
+.feature-item .feature-icon i.fas {
+  color: $primary;
+   text-decoration: none !important;
+}
+
+//  FONDO DE COLOR PARA ICONOS DENTRO DE INPUTS
+.input-group-text.bg-primary .fas {
+  color: variables.$white; 
+}
+
+// ===== ESTILOS PARA BOTONES DE FILTRO ACTIVOS =====
+.btn-outline-primary.active {
+  background-color: variables.$primary;
+  border-color: variables.$primary-dark;
+  color: variables.$white !important;
+}
+// ELIMINA AZUL DE ENFOQUE POR DEFECTO DE BOOTSTRAP
+.btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+// FOCUS VISIBLE PARA ACCESIBILIDAD
+.btn:focus-visible {
+  outline: 2px solid variables.$accent;
+  outline-offset: 2px;
+}
+
+// ===== TRANSICIÓN SUAVE PARA MOSTRAR/OCULTAR =====
+.col-lg-4,
+.col-md-6 {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.col-lg-4:not(.oculto),
+.col-md-6:not(.oculto) {
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
